@@ -1,0 +1,39 @@
+{
+  "name": "laima",
+  "version": "1.0.0",
+  "description": "O Laima é um pacote npm que permite trabalhar com datas de maneira simples e intuitiva. Este pacote inclui funções para manipular, formatar, comparar e exibir datas em diferentes formatos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hangell/laima.git"
+  },
+  "keywords": [
+    "Data",
+    "Tempo",
+    "Duração",
+    "Diferença",
+    "Intervalo",
+    "Calculadora",
+    "Comparação",
+    "Comparador",
+    "Manipulação",
+    "Formatação",
+    "Operações",
+    "Horário",
+    "Cronômetro",
+    "Contagem regressiva",
+    "Ferramenta",
+    "Utilitário",
+    "Cálculo",
+    "Análise"
+  ],
+  "author": "Rodrigo Rangel <rodrigo@hangell.org> (https://github.com/Hangell)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Hangell/laima/issues"
+  },
+  "homepage": "https://github.com/Hangell/laima#readme"
+}
