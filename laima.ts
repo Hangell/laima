@@ -28,6 +28,18 @@ class laima {
         return date.getTime();
     }
 
+    /**
+     * Calcula a diferença de tempo em dias entre dois valores de epoch.
+     *
+     * @param {number} epoch1 - O primeiro valor de epoch.
+     * @param {number} epoch2 - O segundo valor de epoch.
+     * @returns {number} A diferença de tempo em dias entre os dois valores de epoch.
+     */
+    getDaysDifferenceBetweenEpochs(epoch1: number, epoch2: number): number {
+        const millisecondsPerDay = 24 * 60 * 60 * 1000;
+        const daysDifference = Math.abs(epoch1 - epoch2) / millisecondsPerDay;
+        return Math.round(daysDifference);
+    }
 
     /**
      * Calcula a diferença de tempo em milissegundos entre duas datas.
@@ -138,5 +150,6 @@ class laima {
     }
 }
 
-export default new laima();
+const laimaInstance = new laima();
+export = laimaInstance;
 
