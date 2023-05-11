@@ -123,6 +123,29 @@ export default class laima {
         return newDate;
     }
 
+
+    /**
+     * Retorna a maior (mais recente) de duas datas.
+     *
+     * @param {Date} date1 - A primeira data.
+     * @param {Date} date2 - A segunda data.
+     * @returns {Date} A maior (mais recente) das duas datas fornecidas.
+     */
+    getMaxDate(date1: Date, date2: Date): Date {
+        return date1 > date2 ? date1 : date2;
+    }
+
+    /**
+     * Retorna a menor (mais antiga) de duas datas.
+     *
+     * @param {Date} date1 - A primeira data.
+     * @param {Date} date2 - A segunda data.
+     * @returns {Date} A menor (mais antiga) das duas datas fornecidas.
+     */
+    getMinDate(date1: Date, date2: Date): Date {
+        return date1 < date2 ? date1 : date2;
+    }
+
     /**
 
      Função que retorna a data e hora atuais em um formato específico.

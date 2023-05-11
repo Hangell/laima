@@ -94,6 +94,26 @@ Example
 console.log(laima.addDays(date, 365)); // Exemplo de retorno: "2024-05-11 14:25:11"
 console.log(laima.subDays(date, 365)); // e+Exemplo de retorno: "2022-05-11 14:25:11"
 ```
+### Date Max and date min
+
+
+The function getMaxDate takes two Date objects as arguments and returns the most recent of the two dates.
+```js
+const date1 = new Date(2022, 0, 1); // 1 de Janeiro de 2022
+const date2 = new Date(2023, 0, 1); // 1 de Janeiro de 2023
+
+console.log(laima.getMaxDate(date1, date2));
+// Saída: 2023-01-01T00:00:00.000Z
+```
+The function getMinDate takes two Date objects as arguments and returns the earliest of the two dates.
+```js
+const date1 = new Date(2022, 0, 1); // 1 de Janeiro de 2022
+const date2 = new Date(2023, 0, 1); // 1 de Janeiro de 2023
+
+console.log(laima.getMinDate(date1, date2));
+// Saída: 2022-01-01T00:00:00.000Z
+
+```
 
 ### Date Formatting
 
