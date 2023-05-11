@@ -34,7 +34,6 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/dist/index.js&#10;C:/www/mynpm/laima/dist/laima.js" />
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="TypeScript" />
@@ -56,6 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1683753548780</updated>
       <workItem from="1683753553843" duration="10864000" />
+      <workItem from="1683766994735" duration="421000" />
     </task>
     <servers />
   </component>
@@ -72,6 +72,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
