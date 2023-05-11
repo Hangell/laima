@@ -1,9 +1,4 @@
-'use strict';
-
 class laima {
-    constructor() {
-        this.name = 'laima';
-    }
 
     /**
      * Retorna horario do Epoch
@@ -14,14 +9,35 @@ class laima {
     }
 
     /**
+     * Converte um valor de epoch em um objeto Date.
+     *
+     * @param {number} epochTime - O valor de epoch a ser convertido.
+     * @returns {Date} Um objeto Date correspondente ao valor de epoch fornecido.
+     */
+    epochToDate(epochTime: number): Date {
+        return new Date(epochTime);
+    }
+
+    /**
+     * Converte um objeto Date em um valor de epoch.
+     *
+     * @param {Date} date - O objeto Date a ser convertido.
+     * @returns {number} O valor de epoch correspondente ao objeto Date fornecido.
+     */
+    dateToEpoch(date: Date): number {
+        return date.getTime();
+    }
+
+
+    /**
      * Calcula a diferença de tempo em milissegundos entre duas datas.
      * 
      * @param {Date} date1 - A primeira data.
      * @param {Date} date2 - A segunda data.
      * @returns {number} A diferença de tempo em milissegundos entre as duas datas.
      */
-    getTimeDifference(date1, date2) {
-        return Math.abs(date1 - date2);
+    getTimeDifference(date1: Date, date2: Date): number {
+        return Math.abs(date1.getTime() - date2.getTime());
     }
 
 
@@ -31,16 +47,14 @@ class laima {
      * @param {Date} date - A data a ser formatada.
      * @returns {string} A data formatada no padrão de banco de dados (YYYY-MM-DD).
      */
-    formatDateForDB(date) {
+    formatDateForDB(date: Date): string {
         const year = date.getFullYear();
-        let month = date.getMonth() + 1;
-        if (month < 10) {
-            month = `0${month}`;
-        }
-        let day = date.getDate();
-        if (day < 10) {
-            day = `0${day}`;
-        }
+        const monthNumber = date.getMonth() + 1;
+        const dayNumber = date.getDate();
+    
+        const month = monthNumber < 10 ? `0${monthNumber}` : monthNumber.toString();
+        const day = dayNumber < 10 ? `0${dayNumber}` : dayNumber.toString();
+    
         return `${year}-${month}-${day}`;
     }
 
@@ -50,7 +64,7 @@ class laima {
      * @param {string} dateString - A data em formato de string (YYYY-MM-DD) a ser convertida.
      * @returns {Date} Um objeto Date correspondente à data fornecida em formato de string.
      */
-    parseDateFromDB(dateString) {
+    parseDateFromDB(dateString: string): Date {
         const parts = dateString.split("-");
         const year = parseInt(parts[0], 10);
         const month = parseInt(parts[1], 10) - 1;
@@ -66,7 +80,7 @@ class laima {
      * @param {number} days - O número de dias a serem adicionados (positivo) ou subtraídos (negativo) à data base.
      * @returns {Date} Um novo objeto Date com os dias adicionados ou subtraídos.
      */
-    addDays(date, days) {
+    addDays(date: Date, days: number): Date {
         const newDate = new Date(date);
         newDate.setDate(newDate.getDate() + days);
         return newDate;
@@ -80,7 +94,7 @@ class laima {
      * @param {number} days - O número de dias a serem adicionados (positivo) ou subtraídos (negativo) à data base.
      * @returns {Date} Um novo objeto Date com os dias adicionados ou subtraídos.
      */
-    subDays(date, days) {
+    subDays(date: Date, days: number): Date {
         const newDate = new Date(date);
         newDate.setDate(newDate.getDate() - days);
         return newDate;
@@ -100,39 +114,29 @@ class laima {
      * @param {string} formatString - A string de formato contendo os marcadores a serem substituídos pelos componentes da data.
      * @returns {string} A data formatada de acordo com a string de formato fornecida.
      */
-    format(date, formatString) {
+    format(date: Date, formatString: string): string {
         const year = date.getFullYear();
-        let month = date.getMonth() + 1;
-        let day = date.getDate();
-        let hours = date.getHours();
-        let minutes = date.getMinutes();
-        let seconds = date.getSeconds();
-
-        if (month < 10) {
-            month = `0${month}`;
-        }
-        if (day < 10) {
-            day = `0${day}`;
-        }
-        if (hours < 10) {
-            hours = `0${hours}`;
-        }
-        if (minutes < 10) {
-            minutes = `0${minutes}`;
-        }
-        if (seconds < 10) {
-            seconds = `0${seconds}`;
-        }
-
+        const monthNumber = date.getMonth() + 1;
+        const dayNumber = date.getDate();
+        const hoursNumber = date.getHours();
+        const minutesNumber = date.getMinutes();
+        const secondsNumber = date.getSeconds();
+    
+        const month = monthNumber < 10 ? `0${monthNumber}` : monthNumber.toString();
+        const day = dayNumber < 10 ? `0${dayNumber}` : dayNumber.toString();
+        const hours = hoursNumber < 10 ? `0${hoursNumber}` : hoursNumber.toString();
+        const minutes = minutesNumber < 10 ? `0${minutesNumber}` : minutesNumber.toString();
+        const seconds = secondsNumber < 10 ? `0${secondsNumber}` : secondsNumber.toString();
+    
         return formatString
-            .replace('YYYY', year)
+            .replace('YYYY', year.toString())
             .replace('MM', month)
             .replace('DD', day)
             .replace('HH', hours)
             .replace('mm', minutes)
             .replace('ss', seconds);
     }
-
 }
 
-module.exports = new laima();
+export default new laima();
+

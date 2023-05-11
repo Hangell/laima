@@ -1,39 +1,65 @@
 {
   "name": "laima",
-  "version": "1.0.1",
-  "description": "O Laima é um pacote npm que permite trabalhar com datas de maneira simples e intuitiva. Este pacote inclui funções para manipular, formatar, comparar e exibir datas em diferentes formatos.",
-  "main": "index.js",
+  "version": "1.0.2",
+  "description": "Laima is a npm package that enables you to work with dates in a simple and intuitive way. This package includes functions for manipulating, formatting, comparing, and displaying dates in different formats. It is the newest alternative to Moment, offering an easier and more efficient way to perform date operations in JavaScript.",
+  "main": "dist/laima.js",
+  "types": "dist/laima.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc --project tsconfig.json",
+    "build:umd": "rollup -c rollup.config.js",
+    "commit": "git-cz",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Hangell/laima.git"
   },
   "keywords": [
-    "Data",
-    "Tempo",
-    "Duração",
-    "Diferença",
-    "Intervalo",
-    "Calculadora",
-    "Comparação",
-    "Comparador",
-    "Manipulação",
-    "Formatação",
-    "Operações",
-    "Horário",
-    "Cronômetro",
-    "Contagem regressiva",
-    "Ferramenta",
-    "Utilitário",
-    "Cálculo",
-    "Análise"
+    "Date",
+    "Time",
+    "Duration",
+    "Difference",
+    "Interval",
+    "Calculator",
+    "Comparison",
+    "Comparator",
+    "Manipulation",
+    "Formatting",
+    "Operations",
+    "Schedule",
+    "Stopwatch",
+    "Countdown",
+    "Tool",
+    "Utility",
+    "Calculation",
+    "Analysis",
+    "Epoch",
+    "Timestamp",
+    "Moment",
+    "Momentjs",
+    "Moment.js",
+    "Moment.js Alternative",
+    "Momentjs Alternative",
+    "Moment.js Alternative Library"
   ],
   "author": "Rodrigo Rangel <rodrigo@hangell.org> (https://github.com/Hangell)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Hangell/laima/issues"
   },
-  "homepage": "https://github.com/Hangell/laima#readme"
+  "homepage": "https://github.com/Hangell/laima#readme",
+  "devDependencies": {
+    "@types/jest": "29.5.1",
+    "@types/node": "20.1.2",
+    "git-cz": "4.9.0",
+    "jest-extended": "3.2.4",
+    "ts-jest": "29.1.0",
+    "ts-standard": "12.0.2",
+    "typescript": "5.0.4"
+  },
+  "ts-standard": {
+    "project": "./tsconfig.json"
+  }
 }
