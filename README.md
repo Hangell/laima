@@ -24,7 +24,11 @@ yarn add laima
 To import Laima, use the following command:
 ```js
 #js
-const laima = require('laima');
+const laima = require('laima').default;
+
+const myLaima = new laima();// 2021-05-10T14:25:11.095Z
+console.log('getEpochTime'); // 1620650111095
+console.log(myLaima.getEpochTime());
 ```
 ```ts
 #ts
@@ -85,14 +89,18 @@ const datePlusFiveDays = laima.addDays(date, 5); // Returns a new Date object fo
 const dateMinusThreeDays = laima.subDays(date, 3); // Returns a new Date object for April 28, 2022
 ```
 
+Example
+```js
+console.log(laima.addDays(date, 365)); // Exemplo de retorno: "2024-05-11 14:25:11"
+console.log(laima.subDays(date, 365)); // e+Exemplo de retorno: "2022-05-11 14:25:11"
+```
+
 ### Date Formatting
 
 Laima allows formatting dates in different formats using markers to replace the date components. The accepted markers are:
 
-* 'YYYY': Represents the year with four digits (example: 2022).
-* 'YY': Represents the year with two digits (example: 22).
-* 'MMMM': Represents the month in full (example: January).
-* 'MMM': Represents the abbreviated month (example: Jan).
+* 'YYYY': Represents the year with four digits (example: 2023).
+* 'YY': Represents the year with two digits (example: 23).
 * 'MM': Represents the month with two digits (01-12).
 * 'M': Represents the month without leading zeros (1-12).
 * 'DD': Represents the day of the month with two digits (01-31).
@@ -112,6 +120,18 @@ To format a date, use the format() function from Laima. For example:
 const date = new Date(2022, 0, 1, 14, 30, 0); // January 1, 2022, at 14:30
 const formattedDate = laima.format(date, 'DD/MM/YYYY HH:mm:ss');
 console.log(formattedDate); // "01/01/2022 14:30:00" 4
+```
+
+Example
+```js
+console.log(laima.now()); // Exemplo de retorno: "2023-05-12 14:25:11"
+console.log(laima.now('YYYY/MM/DD')); // Exemplo de retorno: "2023/05/12"
+console.log(laima.now('HH:mm:ss')); // Exemplo de retorno: "14:25:11"
+console.log(laima.now('DD/MM/YYYY')); // Exemplo de retorno: "12/05/2023"
+console.log(laima.now('YYYY-MM-DD HH:mm:ss')); // Exemplo de retorno: "2023-05-12 14:25:11"
+console.log(laima.now('YY/MM/DD HH:mm:ss')); // Exemplo de retorno: "23/05/12 14:25:11"
+console.log(laima.now('mm DD, YYYY')); // Exemplo de retorno: "May 12, 2023"
+console.log(laima.now('MM/DD/YYYY HH:mm:ss')); // Exemplo de retorno: "05/12/2023 14:25:11"
 ```
 
 ##Curiosity about the name Laima 

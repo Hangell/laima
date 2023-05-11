@@ -1,6 +1,6 @@
 {
   "name": "laima",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Laima is a npm package that enables you to work with dates in a simple and intuitive way. This package includes functions for manipulating, formatting, comparing, and displaying dates in different formats. It is the newest alternative to Moment, offering an easier and more efficient way to perform date operations in JavaScript.",
   "main": "dist/laima.js",
   "types": "dist/laima.d.ts",

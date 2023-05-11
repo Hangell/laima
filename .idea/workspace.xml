@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="434fec54-3d02-4eea-be68-387bcc5020a2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/dist/laima.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laima.ts" beforeDir="false" afterPath="$PROJECT_DIR$/laima.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1683753548780</updated>
       <workItem from="1683753553843" duration="10864000" />
-      <workItem from="1683766994735" duration="1803000" />
+      <workItem from="1683766994735" duration="10610000" />
     </task>
     <servers />
   </component>
