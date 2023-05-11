@@ -25,6 +25,12 @@ jobs:
       - name: Build (if necessary)
         run: npm run build
 
+      - name: Prepare package for publishing
+        run: npm run prepublishOnly
+
+      - name: Change to dist directory
+        run: cd dist
+
       - name: Publish to npm
         run: npm publish
         env:
