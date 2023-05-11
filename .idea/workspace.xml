@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="434fec54-3d02-4eea-be68-387bcc5020a2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/npm_publish.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/npm_publish.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="434fec54-3d02-4eea-be68-387bcc5020a2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +50,7 @@
       <option name="presentableId" value="Default" />
       <updated>1683753548780</updated>
       <workItem from="1683753553843" duration="10864000" />
-      <workItem from="1683766994735" duration="421000" />
+      <workItem from="1683766994735" duration="740000" />
     </task>
     <servers />
   </component>
