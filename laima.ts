@@ -76,10 +76,10 @@ export default class laima {
         const year = date.getFullYear();
         const monthNumber = date.getMonth() + 1;
         const dayNumber = date.getDate();
-    
+
         const month = monthNumber < 10 ? `0${monthNumber}` : monthNumber.toString();
         const day = dayNumber < 10 ? `0${dayNumber}` : dayNumber.toString();
-    
+
         return `${year}-${month}-${day}`;
     }
 
@@ -206,5 +206,101 @@ export default class laima {
         }
 
         return formattedDate;
+    }
+
+    /**
+     * Adiciona um número específico de meses a uma data.
+     * 
+     * @param {Date} date - A data base à qual os meses serão adicionados.
+     * @param {number} months - O número de meses a serem adicionados à data base.
+     * @returns {Date} Um novo objeto Date com os meses adicionados.
+     */
+    addMonths(date: Date, months: number): Date {
+        const year = date.getFullYear();
+        const month = date.getMonth();
+        const day = date.getDate();
+        console.log(`year: ${year}, month: ${month}, day: ${day}`);
+        const newDate = new Date(year, month + months, day);
+        console.log(`newDate: ${newDate.toString()}, newDate month: ${newDate.getMonth()}`);
+        return newDate;
+    }
+ 
+    /**
+     * Subtrai um número específico de meses de uma data.
+     * 
+     * @param {Date} date - A data base da qual os meses serão subtraídos.
+     * @param {number} months - O número de meses a serem subtraídos da data base.
+     * @returns {Date} Um novo objeto Date com os meses subtraídos.
+     */
+    subMonths(date: Date, months: number): Date {
+        const newDate = new Date(date);
+        newDate.setMonth(newDate.getMonth() - months);
+        return newDate;
+    }
+
+    /**
+     * Formata um objeto Date para uma string no formato local.
+     * 
+     * @param {Date} date - O objeto Date a ser formatado.
+     * @returns {string} A data formatada no formato local.
+     */
+    formatToLocalString(date: Date): string {
+        return date.toLocaleString();
+    }
+
+    /**
+     * Retorna um novo objeto Date representando o início do dia (meia-noite) da data fornecida.
+     * 
+     * @param {Date} date - A data original.
+     * @returns {Date} Um novo objeto Date representando a meia-noite do dia da data fornecida.
+     */
+    getStartOfDay(date: Date): Date {
+        const newDate = new Date(date);
+        newDate.setHours(0, 0, 0, 0);
+        return newDate;
+    }
+
+    /**
+     * Retorna um novo objeto Date representando o final do dia (23:59:59.999) da data fornecida.
+     * 
+     * @param {Date} date - A data original.
+     * @returns {Date} Um novo objeto Date representando o final do dia da data fornecida.
+     */
+    getEndOfDay(date: Date): Date {
+        const newDate = new Date(date);
+        newDate.setHours(23, 59, 59, 999);
+        return newDate;
+    }
+
+    /**
+     * Determina se um ano é bissexto ou não.
+     * 
+     * @param {number} year - O ano a ser verificado.
+     * @returns {boolean} Retorna 'true' se o ano for bissexto e 'false' caso contrário.
+     */
+    isLeapYear(year: number): boolean {
+        return ((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0);
+    }
+
+    /**
+     * Retorna o número de dias em um mês para um ano específico.
+     * 
+     * @param {number} year - O ano a ser considerado.
+     * @param {number} month - O mês a ser considerado (1 para Janeiro, 2 para Fevereiro, etc).
+     * @returns {number} O número de dias no mês especificado para o ano fornecido.
+     */
+    getDaysInMonth(year: number, month: number): number {
+        return new Date(year, month, 0).getDate();
+    }
+
+    /**
+     * Retorna o número de dias restantes até o final do mês para uma data específica.
+     * 
+     * @param {Date} date - A data a ser considerada.
+     * @returns {number} O número de dias restantes até o final do mês.
+     */
+    getDaysRemainingInMonth(date: Date): number {
+        const endOfMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+        return endOfMonth.getDate() - date.getDate();
     }
 }

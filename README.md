@@ -154,15 +154,98 @@ console.log(laima.now('mm DD, YYYY')); // Exemplo de retorno: "May 12, 2023"
 console.log(laima.now('MM/DD/YYYY HH:mm:ss')); // Exemplo de retorno: "05/12/2023 14:25:11"
 ```
 
-##Curiosity about the name Laima 
+### Adding and Subtracting Months
+The addMonths(date, months) function adds a specific number of months to a given date.
+```js
+const date = new Date(2022, 0, 1); // January 1, 2022
+const newDate = laima.addMonths(date, 3); // Adds 3 months to the date
+console.log(newDate);
+// Output: 2022-04-01T00:00:00.000Z
+```
+
+The subMonths(date, months) function subtracts a specific number of months from a given date.
+```js
+const date = new Date(2022, 0, 1); // January 1, 2022
+const newDate = laima.subMonths(date, 2); // Subtracts 2 months from the date
+console.log(newDate);
+// Output: 2021-10-01T00:00:00.000Z
+```
+
+### Formatting Date to Local String
+The formatToLocalString(date) function formats a Date object to a string in the local format.
+
+```js
+const date = new Date(2022, 0, 1, 14, 30, 0); // January 1, 2022, at 14:30
+const formattedDate = laima.formatToLocalString(date);
+console.log(formattedDate);
+// Output: "1/1/2022, 2:30:00 PM" (format may vary based on locale)
+```
+
+### Getting Start and End of Day
+The getStartOfDay(date) function returns a new Date object representing the start of the day (midnight) for a given date.
+```js
+const date = new Date(2022, 0, 1, 14, 30, 0); // January 1, 2022, at 14:30
+const startOfDay = laima.getStartOfDay(date);
+console.log(startOfDay);
+// Output: 2022-01-01T00:00:00.000Z
+```
+
+The getEndOfDay(date) function returns a new Date object representing the end of the day (23:59:59.999) for a given date.
+```js
+const date = new Date(2022, 0, 1, 14, 30, 0); // January 1, 2022, at 14:30
+const endOfDay = laima.getEndOfDay(date);
+console.log(endOfDay);
+// Output: 2022-01-01T23:59:59.999Z
+```
+
+### Leap Year Check
+The isLeapYear(year) function determines whether a year is a leap year or not.
+```js
+console.log(laima.isLeapYear(2020));
+// Output: true
+
+console.log(laima.isLeapYear(2021));
+// Output: false
+```
+
+### Getting Number of Days in a Month
+The getDaysInMonth(year, month) function returns the number of days in a specific month for a given year.
+```js
+console.log(laima.getDaysInMonth(2022, 2)); // March 2022
+// Output: 31
+
+console.log(laima.getDaysInMonth(2023, 1)); // February 2023
+// Output: 28
+```
+
+### Getting Number of Days Remaining in a Month
+The getDaysRemainingInMonth(date) function returns the number of days remaining until the end of the month for a given date.
+```js
+const date = new Date(2022, 0, 1); // January 1, 2022
+const daysRemaining = laima.getDaysRemainingInMonth(date);
+console.log(daysRemaining);
+// Output: 30
+```
+
+These functions provide useful utilities for manipulating and working with dates in JavaScript. You can incorporate them into your projects to perform various date-related operations with ease.
 
 
+## Curiosity about the name Laima
 The name "Laima" was chosen for the npm package as it embodies the concept of destiny and time, which are central themes in working with dates. Just as the Baltic goddess Laima was responsible for weaving the threads of fate that determined the destiny of individuals and communities, the Laima package allows developers to manipulate and analyze dates, ultimately influencing the outcome of various processes and applications. Furthermore, the name "Laima" also carries a sense of renewal and rebirth, which reflects the package's aim to offer a fresh and modern alternative to existing date libraries such as Moment.js.
+
+## Contributing
+Contributions are welcome! If you have any improvements or new features you'd like to add to Laima, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or improvement.
+3. Make the necessary changes and commit them.
+4. Push your branch to your forked repository.
+5. Submit a pull request to the main repository.
+
+* Please ensure that your code follows the established coding conventions and includes appropriate tests for any new functionality.
+
 ## Licença
-
 Laima is licensed under the MIT license. Please refer to the LICENSE file for more information.
-
-
 
 ## Doações
 If you enjoyed using Laima, please consider making a donation to support the continuous development of the project. You can make a donation using one of the following options:
