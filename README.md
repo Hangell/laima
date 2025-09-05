@@ -253,7 +253,7 @@ If you enjoyed using Laima, please consider making a donation to support the con
 
 * Cryptocurrencies or nft MetaMask: 0xEd4d1be72F807Faa358C966a8eF63367c200130F
 
-![Created By](https://hangell.org/wp-content/uploads/2022/04/rodrigorangel.jpeg)
+![Created By](https://avatars.githubusercontent.com/u/53544561?v=4)
 
 
 
