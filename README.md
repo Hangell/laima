@@ -1,5 +1,13 @@
 # 🕰️ Laima
 
+<p align="center">
+  <img src="./assets/logo.png" alt="Laima Logo">
+  <br />
+  <strong>A powerful JavaScript/TypeScript toolkit for dates and time, with zero runtime dependencies.</strong>
+  <br />
+  Format dates, compare moments and calculate time effortlessly, in your app or your terminal.
+</p>
+
 [![npm version](https://badge.fury.io/js/laima.svg)](https://www.npmjs.com/package/laima)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Hangell/laima/blob/main/LICENSE)
 

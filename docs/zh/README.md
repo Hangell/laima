@@ -1,5 +1,16 @@
 # 🕰️ Laima
 
+<p align="center">
+  <img src="../../assets/logo.png" alt="Laima 标志">
+  <br />
+  <strong>功能强大的 JavaScript/TypeScript 日期与时间工具集，零运行时依赖。</strong>
+  <br />
+  在应用或终端中轻松格式化日期、比较时间点并进行时间计算。
+</p>
+
+[![npm version](https://badge.fury.io/js/laima.svg)](https://www.npmjs.com/package/laima)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../../LICENSE)
+
 [🇺🇸 English](../../README.md) · [🇧🇷 Português](../pt/README.md) · [🇷🇺 Русский](../ru/README.md) · [🇮🇳 हिन्दी](../hi/README.md) · **🇨🇳 中文** · [🇪🇸 Español](../es/README.md)
 
 一个用于转换、比较、操作和格式化日期的 TypeScript/JavaScript 库，没有运行时依赖。可选的 CLI 随同一个 npm 包提供。

@@ -1,5 +1,16 @@
 # 🕰️ Laima
 
+<p align="center">
+  <img src="../../assets/logo.png" alt="Логотип Laima">
+  <br />
+  <strong>Мощный набор инструментов JavaScript/TypeScript для работы с датами и временем без зависимостей времени выполнения.</strong>
+  <br />
+  С лёгкостью форматируйте даты, сравнивайте моменты времени и выполняйте расчёты времени в приложении или терминале.
+</p>
+
+[![npm version](https://badge.fury.io/js/laima.svg)](https://www.npmjs.com/package/laima)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../../LICENSE)
+
 [🇺🇸 English](../../README.md) · [🇧🇷 Português](../pt/README.md) · **🇷🇺 Русский** · [🇮🇳 हिन्दी](../hi/README.md) · [🇨🇳 中文](../zh/README.md) · [🇪🇸 Español](../es/README.md)
 
 Библиотека TypeScript/JavaScript для преобразования, сравнения, изменения и форматирования дат без зависимостей времени выполнения. Необязательная CLI входит в тот же npm-пакет.

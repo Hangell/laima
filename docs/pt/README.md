@@ -1,5 +1,13 @@
 # 🕰️ Laima
 
+<p align="center">
+  <img src="../../assets/logo.png" alt="Logo do Laima">
+  <br />
+  <strong>Um poderoso conjunto de ferramentas JavaScript/TypeScript para datas e horários, sem dependências em runtime.</strong>
+  <br />
+  Formate datas, compare momentos e calcule o tempo com facilidade, no seu aplicativo ou no terminal.
+</p>
+
 [![npm version](https://badge.fury.io/js/laima.svg)](https://www.npmjs.com/package/laima)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../../LICENSE)
 

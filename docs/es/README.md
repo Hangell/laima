@@ -1,5 +1,16 @@
 # 🕰️ Laima
 
+<p align="center">
+  <img src="../../assets/logo.png" alt="Logo de Laima">
+  <br />
+  <strong>Un potente conjunto de herramientas JavaScript/TypeScript para fechas y horas, sin dependencias en tiempo de ejecución.</strong>
+  <br />
+  Da formato a fechas, compara momentos y calcula el tiempo fácilmente, en tu aplicación o en la terminal.
+</p>
+
+[![npm version](https://badge.fury.io/js/laima.svg)](https://www.npmjs.com/package/laima)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../../LICENSE)
+
 [🇺🇸 English](../../README.md) · [🇧🇷 Português](../pt/README.md) · [🇷🇺 Русский](../ru/README.md) · [🇮🇳 हिन्दी](../hi/README.md) · [🇨🇳 中文](../zh/README.md) · **🇪🇸 Español**
 
 Biblioteca TypeScript/JavaScript para convertir, comparar, manipular y dar formato a fechas, sin dependencias en tiempo de ejecución. La CLI opcional se incluye en el mismo paquete npm.

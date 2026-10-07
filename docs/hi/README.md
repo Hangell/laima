@@ -1,5 +1,16 @@
 # 🕰️ Laima
 
+<p align="center">
+  <img src="../../assets/logo.png" alt="Laima का लोगो">
+  <br />
+  <strong>तारीख और समय के लिए एक शक्तिशाली JavaScript/TypeScript टूलकिट, बिना किसी रनटाइम निर्भरता के।</strong>
+  <br />
+  अपने ऐप या टर्मिनल में आसानी से तारीखें फ़ॉर्मैट करें, समय बिंदुओं की तुलना करें और समय की गणना करें।
+</p>
+
+[![npm version](https://badge.fury.io/js/laima.svg)](https://www.npmjs.com/package/laima)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../../LICENSE)
+
 [🇺🇸 English](../../README.md) · [🇧🇷 Português](../pt/README.md) · [🇷🇺 Русский](../ru/README.md) · **🇮🇳 हिन्दी** · [🇨🇳 中文](../zh/README.md) · [🇪🇸 Español](../es/README.md)
 
 तारीखों को बदलने, उनकी तुलना करने, उनमें बदलाव करने और उन्हें फ़ॉर्मैट करने के लिए TypeScript/JavaScript लाइब्रेरी। इसकी कोई रनटाइम निर्भरता नहीं है। वैकल्पिक CLI भी इसी npm पैकेज में उपलब्ध है।
