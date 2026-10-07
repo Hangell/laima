@@ -7,8 +7,6 @@
 
 Biblioteca TypeScript/JavaScript para converter, comparar, manipular e formatar datas, sem dependências em runtime. A CLI opcional usa o mesmo pacote npm.
 
-> As adições descritas aqui estão em desenvolvimento (veja [CHANGELOG](../../CHANGELOG.md)); estarão disponíveis no npm após a próxima publicação. A versão não foi alterada nesta preparação.
-
 ## Instalação e uso
 
 ```sh

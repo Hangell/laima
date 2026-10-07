@@ -4,8 +4,6 @@
 
 Biblioteca TypeScript/JavaScript para convertir, comparar, manipular y dar formato a fechas, sin dependencias en tiempo de ejecución. La CLI opcional se incluye en el mismo paquete npm.
 
-> Estas funciones nuevas están en desarrollo (consulta [CHANGELOG](../../CHANGELOG.md)) y estarán disponibles en npm después de la próxima publicación. La versión no se ha modificado durante esta preparación.
-
 ## Instalación y uso
 
 ```sh

@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.1.0 — 2026-10-07
 
 ### Added
 
@@ -22,6 +22,7 @@
 
 - Public method documentation in `src/laima.ts` standardized in English.
 - Main README switched to English, with flag navigation and translations in `pt`, `ru`, `hi`, `zh` and `es`.
+- The full API, type contracts, examples and CLI reference are included in the root README for display on npm.
 
 - Sources organized under `src/`, with a public facade delegating to focused date modules.
 - CLI terminal adapter separated from command handling, help text and argument parsing.

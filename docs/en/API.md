@@ -2,7 +2,7 @@
 
 [README](../../README.md) · [Português](../pt/API.md)
 
-All methods are instance methods: `const laima = new Laima()`. Epoch values always use milliseconds. Legacy methods use local time and JavaScript normalization, without new validation that changes their contract.
+All methods are instance methods: `const laima = new Laima()`. Epoch conversion methods use milliseconds; `fromUnix` and `toUnix` use seconds. Legacy methods use local time and JavaScript normalization, without new validation that changes their contract.
 
 | Method                                                                          | Behavior                                                                                                |
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
