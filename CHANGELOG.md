@@ -37,7 +37,7 @@
 - Build and package contents include TypeScript declarations and CLI executable.
 - Source files are no longer ignored by Git.
 - Removed the historically tracked generated build from Git; builds regenerate `dist/`.
-- Releases publish from the package root after validation, on a matching published release tag.
+- Every push to `main` validates and generates an npm package from the repository root, saves the tarball as an artifact, and publishes previously unpublished versions with the `latest` tag.
 
 ### Compatibility
 
