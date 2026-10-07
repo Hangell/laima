@@ -1,37 +1,27 @@
 name: Publish to npm
-
 on:
-  push:
-    branches:
-      - main
-
+  release:
+    types: [published]
+permissions:
+  contents: read
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
-
+    env:
+      HUSKY: '0'
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 14
-          registry-url: 'https://registry.npmjs.org'
-
-      - name: Install dependencies
-        run: npm install --ignore-scripts
-
-      - name: Build (if necessary)
-        run: npm run build
-
-      - name: Prepare package for publishing
-        run: npm run prepublishOnly
-
-      - name: Change to dist directory
-        run: cd dist
-
-      - name: Publish to npm
-        run: npm publish
+          node-version: 22
+          cache: npm
+          registry-url: https://registry.npmjs.org
+      - run: npm ci
+      - name: Ensure release tag matches package version
         env:
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: node -e "if (process.env.RELEASE_TAG !== 'v' + require('./package.json').version) process.exit(1)"
+      - run: npm publish --tag "$NPM_TAG"
+        env:
+          NPM_TAG: ${{ github.event.release.prerelease && 'next' || 'latest' }}
           NODE_AUTH_TOKEN: ${{ secrets.KEY_LAIMA }}

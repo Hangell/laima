@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+language: pt-BR
+reviews:
+  profile: assertive
+  request_changes_workflow: false
+  auto_review:
+    enabled: true
+    drafts: false
+  path_filters:
+    - '!dist/**'
+    - '!package-lock.json'
+  path_instructions:
+    - path: '**/*.ts'
+      instructions: >-
+        Check npm API backward compatibility, Date input immutability, local time
+        versus UTC, DST, leap years, invalid dates and month overflow. Preserve
+        documented legacy behavior; prefer additive methods for semantic changes.
+        Require regression tests for behavior changes. The library has no runtime dependencies.
+    - path: 'docs/**'
+      instructions: Keep the main English README and Portuguese (pt), Russian (ru), Hindi (hi), Chinese (zh) and Spanish (es) translations synchronized. Check API references and CLI examples for consistency.
+chat:
+  auto_reply: true

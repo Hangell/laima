@@ -5,13 +5,22 @@
   "main": "dist/laima.js",
   "types": "dist/laima.d.ts",
   "scripts": {
-    "prepublishOnly": "cp package.json dist/package.json && cp README.md dist/README.md",
-    "build": "tsc --project tsconfig.json",
-    "build:umd": "rollup -c rollup.config.js",
+    "build": "node scripts/clean.cjs && tsc --project tsconfig.json",
+    "typecheck": "tsc --project config/tsconfig.test.json --noEmit",
+    "lint": "eslint . --max-warnings=0",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
     "commit": "git-cz",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "commitlint": "commitlint --config config/commitlint.config.cjs",
+    "prepare": "node scripts/prepare.cjs",
+    "test": "jest --config config/jest.config.cjs --runInBand",
+    "test:watch": "jest --config config/jest.config.cjs --watch",
+    "test:coverage": "jest --config config/jest.config.cjs --runInBand --coverage",
+    "test:package": "npm run build && node tests/integration/package.cjs",
+    "check": "npm run lint && npm run format:check && npm run typecheck && npm run test:coverage && npm run test:package",
+    "prepack": "npm run build",
+    "prepublishOnly": "npm run check"
   },
   "repository": {
     "type": "git",
@@ -52,15 +61,36 @@
   },
   "homepage": "https://github.com/Hangell/laima#readme",
   "devDependencies": {
-    "@types/jest": "29.5.1",
-    "@types/node": "20.1.2",
+    "@commitlint/cli": "20.5.3",
+    "@commitlint/config-conventional": "20.5.3",
+    "@eslint/js": "10.0.1",
+    "@types/jest": "30.0.0",
+    "@types/node": "22.20.5",
+    "eslint": "10.12.0",
+    "eslint-config-prettier": "10.1.8",
     "git-cz": "4.9.0",
-    "jest-extended": "3.2.4",
-    "ts-jest": "29.1.0",
-    "ts-standard": "12.0.2",
-    "typescript": "5.0.4"
+    "husky": "9.1.7",
+    "jest": "30.5.2",
+    "lint-staged": "16.4.0",
+    "prettier": "3.9.9",
+    "ts-jest": "29.4.14",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.71.1"
   },
-  "ts-standard": {
-    "project": "./tsconfig.json"
+  "bin": {
+    "laima": "dist/cli.js"
+  },
+  "files": [
+    "dist/",
+    "docs/",
+    "CONTRIBUTING.md",
+    "CHANGELOG.md"
+  ],
+  "lint-staged": {
+    "*.{ts,js,cjs,mjs}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": "prettier --write"
   }
 }
